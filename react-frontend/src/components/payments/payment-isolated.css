@@ -1,0 +1,146 @@
+/* src/components/payments/payment-isolated.css */
+/* ✅ STYLES ISOLÉS POUR LE SYSTÈME DE PAIEMENT */
+/* ✅ PRÉSERVATION : Fusion complète de index.css + App.css + variables Tailwind */
+
+.payment-isolated {
+  /* ===== VARIABLES CSS PAYMENT - MODE CLAIR ===== */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.payment-isolated.dark {
+  /* ===== VARIABLES CSS PAYMENT - MODE SOMBRE ===== */
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+/* ===== APPLICATIONS DES VARIABLES ===== */
+.payment-isolated * {
+  border-color: hsl(var(--border));
+}
+
+.payment-isolated body,
+.payment-isolated {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* ===== STYLES APP.CSS PRÉSERVÉS ===== */
+.payment-isolated #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.payment-isolated .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.payment-isolated .logo:hover {
+  filter: drop-shadow(0 0 2em #2563eb66); /* brand-blue avec transparence */
+}
+
+.payment-isolated .logo.react:hover {
+  filter: drop-shadow(0 0 2em #f59e0b66); /* brand-yellow avec transparence */
+}
+
+.payment-isolated .logo.pixelrise:hover {
+  filter: drop-shadow(0 0 2em #8b5cf666); /* purple-500 avec transparence */
+}
+
+/* ===== ANIMATIONS PRÉSERVÉES ===== */
+@keyframes payment-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes payment-logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #2563eb44);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #2563eb88);
+  }
+}
+
+@keyframes payment-premium-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .payment-isolated a:nth-of-type(2) .logo {
+    animation: payment-logo-spin infinite 20s linear;
+  }
+  
+  .payment-isolated .logo.premium {
+    animation: payment-logo-glow 3s ease-in-out infinite;
+  }
+  
+  .payment-isolated .logo.float {
+    animation: payment-premium-float 6s ease-in-out infinite;
+  }
+}

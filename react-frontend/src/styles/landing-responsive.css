@@ -1,0 +1,200 @@
+/* Améliorations responsive pour Navbar et Footer */
+
+/* Navbar responsive fixes */
+@media screen and (max-width: 991px) {
+  .combine-nav3_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .combine-nav3_menu.w--open {
+    display: block !important;
+  }
+
+  .combine-nav3_link-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .combine-nav3_link {
+    display: block;
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .combine-nav1_button-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .combine-nav1_button-wrapper a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .combine-nav3_menu-button {
+    display: flex !important;
+    cursor: pointer;
+  }
+
+  .combine-menu-icon {
+    width: 24px;
+    height: 16px;
+    position: relative;
+  }
+
+  .combine-menu-icon_line-top,
+  .combine-menu-icon_line-middle,
+  .combine-menu-icon_line-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .combine-menu-icon_line-top {
+    top: 0;
+  }
+
+  .combine-menu-icon_line-middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .combine-menu-icon_line-bottom {
+    bottom: 0;
+  }
+
+  .w-nav-button.w--open .combine-menu-icon_line-top {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+
+  .w-nav-button.w--open .combine-menu-icon_line-middle {
+    opacity: 0;
+  }
+
+  .w-nav-button.w--open .combine-menu-icon_line-bottom {
+    transform: rotate(-45deg);
+    bottom: 50%;
+  }
+
+  .w-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+/* Footer responsive fixes */
+@media screen and (max-width: 768px) {
+  .newsletter-section {
+    padding: 60px 20px !important;
+  }
+
+  .newsletter-content {
+    padding: 20px;
+  }
+
+  .heading-5 {
+    font-size: 24px !important;
+  }
+
+  .l-body {
+    font-size: 14px !important;
+  }
+
+  .combine-footer3_top {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .combine-footer3_nav-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .combine-footer3_social-links {
+    justify-content: center;
+  }
+
+  .combine-footer3_bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-company {
+    text-align: center;
+  }
+
+  .stacked-description {
+    text-align: center;
+  }
+
+  .combine-footer3_nav-menu {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .newsletter-section {
+    padding: 40px 15px !important;
+  }
+
+  .heading-5 {
+    font-size: 20px !important;
+  }
+
+  .lemon-lime-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .combine-button-white-small,
+  .combine-button-small-2 {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .combine-nav3_logo {
+    max-width: 120px;
+  }
+}
+
+/* Amélioration de la navigation sticky */
+.combine-nav3_component {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Amélioration des boutons */
+.combine-button-white-small:hover,
+.combine-button-small-2:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Amélioration du footer newsletter */
+.newsletter-box {
+  max-width: 100%;
+  padding: 20px;
+}
+
+.newletter-button {
+  margin-top: 20px;
+}

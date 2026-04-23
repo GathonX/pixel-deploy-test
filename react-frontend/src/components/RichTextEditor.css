@@ -1,0 +1,46 @@
+/* src/components/RichTextEditor.css */
+
+.rich-text-editor .quill {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.rich-text-editor .ql-toolbar {
+  border: 1px solid #e2e8f0;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background: #f8fafc;
+}
+
+.rich-text-editor .ql-container {
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  min-height: 300px;
+}
+
+.rich-text-editor .ql-editor {
+  min-height: 300px;
+  padding: 1rem;
+}
+
+.rich-text-editor .ql-editor.ql-blank::before {
+  color: #94a3b8;
+  font-style: normal;
+}
+
+/* Style des liens dans l'éditeur */
+.rich-text-editor .ql-editor a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Erreur state */
+.rich-text-editor.error .quill,
+.rich-text-editor.error .ql-toolbar,
+.rich-text-editor.error .ql-container {
+  border-color: #ef4444;
+}

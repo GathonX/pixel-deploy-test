@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 10%;
+
+    --primary: 192 82% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 36 95% 55%;
+    --accent-foreground: 36 95% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 192 82% 32%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 30% 8%;
+    --sidebar-foreground: 210 10% 90%;
+    --sidebar-primary: 192 82% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 25% 15%;
+    --sidebar-accent-foreground: 210 10% 90%;
+    --sidebar-border: 210 25% 18%;
+    --sidebar-ring: 192 82% 45%;
+
+    /* Custom tokens */
+    --ocean: 192 82% 32%;
+    --ocean-light: 192 70% 92%;
+    --emerald: 160 84% 39%;
+    --emerald-light: 160 60% 92%;
+    --sunset: 36 95% 55%;
+    --sunset-light: 36 80% 92%;
+    --coral: 0 72% 51%;
+    --coral-light: 0 60% 94%;
+
+    /* Status colors */
+    --status-confirmed: 160 84% 39%;
+    --status-pending: 36 95% 55%;
+    --status-cancelled: 0 72% 51%;
+    --status-maintenance: 210 15% 45%;
+
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(192 82% 32%), hsl(160 84% 39%));
+    --gradient-sunset: linear-gradient(135deg, hsl(36 95% 55%), hsl(0 72% 51%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 30% 8%) 0%, hsl(192 82% 22%) 50%, hsl(160 60% 25%) 100%);
+
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}

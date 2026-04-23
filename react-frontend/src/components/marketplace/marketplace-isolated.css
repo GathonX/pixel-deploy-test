@@ -1,0 +1,7 @@
+/* marketplace-isolated.css - Wrapper pour le module Marketplace */
+
+.marketplace-isolated {
+  /* Pas d'isolation CSS - le marketplace utilise ses propres styles */
+  width: 100%;
+  min-height: 100vh;
+}

@@ -1,0 +1,11 @@
+export { NavbarLuxios }    from './NavbarLuxios';
+export { HeroLuxios }      from './HeroLuxios';
+export { PageHeroLuxios }  from './PageHeroLuxios';
+export { BookingLuxios }   from './BookingLuxios';
+export { WelcomeLuxios }   from './WelcomeLuxios';
+export { RoomsLuxios }     from './RoomsLuxios';
+export { AmenitiesLuxios } from './AmenitiesLuxios';
+export { ServicesLuxios }  from './ServicesLuxios';
+export { NewsLuxios }      from './NewsLuxios';
+export { FooterLuxios }    from './FooterLuxios';
+export { ContactLuxios }   from './ContactLuxios';

@@ -1,0 +1,115 @@
+import { Ticket } from '@/models/Ticket';
+
+export const mockTickets: Ticket[] = [
+  {
+    id: 1,
+    title: 'Problème de connexion au compte',
+    description:
+      "Je n'arrive pas à me connecter à mon compte depuis hier. J'ai essayé de réinitialiser mon mot de passe mais je ne reçois pas d'email.",
+    status: 'open',
+    category: 'Authentification',
+    image_url: null,
+    created_at: '2025-04-07T10:30:00Z',
+    updated_at: '2025-04-07T11:30:00Z',
+    messages: [
+      {
+        id: 1,
+        ticket_id: 1,
+        sender: 'user',
+        text: "Je n'arrive pas à me connecter à mon compte depuis hier.",
+        image_url: null,
+        created_at: '2025-04-07T10:30:00Z',
+      },
+      {
+        id: 2,
+        ticket_id: 1,
+        sender: 'admin',
+        text: 'Bonjour, avez-vous essayé de réinitialiser votre mot de passe ?',
+        image_url: null,
+        created_at: '2025-04-07T11:15:00Z',
+      },
+      {
+        id: 3,
+        ticket_id: 1,
+        sender: 'user',
+        text: "Oui, mais je ne reçois pas l'email de réinitialisation.",
+        image_url: null,
+        created_at: '2025-04-07T11:30:00Z',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Question sur la facturation',
+    description:
+      'Je vois une charge supplémentaire sur ma facture du mois dernier que je ne comprends pas.',
+    status: 'pending',
+    category: 'Facturation',
+    image_url: null,
+    created_at: '2025-04-05T14:20:00Z',
+    updated_at: '2025-04-05T16:45:00Z',
+    messages: [
+      {
+        id: 1,
+        ticket_id: 2,
+        sender: 'user',
+        text: 'Je vois une charge supplémentaire sur ma facture du mois dernier.',
+        image_url: null,
+        created_at: '2025-04-05T14:20:00Z',
+      },
+      {
+        id: 2,
+        ticket_id: 2,
+        sender: 'admin',
+        text: 'Pouvez-vous nous préciser quelle charge exactement ?',
+        image_url: null,
+        created_at: '2025-04-05T16:45:00Z',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Fonctionnalité manquante dans l'éditeur",
+    description:
+      "J'aimerais pouvoir ajouter plus de polices dans l'éditeur de site web.",
+    status: 'resolved',
+    category: 'Fonctionnalité',
+    image_url: null,
+    created_at: '2025-04-02T09:10:00Z',
+    updated_at: '2025-04-04T15:20:00Z',
+    messages: [
+      {
+        id: 1,
+        ticket_id: 3,
+        sender: 'user',
+        text: "J'aimerais pouvoir ajouter plus de polices dans l'éditeur de site web.",
+        image_url: null,
+        created_at: '2025-04-02T09:10:00Z',
+      },
+      {
+        id: 2,
+        ticket_id: 3,
+        sender: 'admin',
+        text: 'Merci pour votre suggestion. Nous allons l’ajouter à notre liste de fonctionnalités à développer.',
+        image_url: null,
+        created_at: '2025-04-02T10:30:00Z',
+      },
+      {
+        id: 3,
+        ticket_id: 3,
+        sender: 'user',
+        text: 'Super, merci beaucoup !',
+        image_url: null,
+        created_at: '2025-04-02T10:45:00Z',
+      },
+      {
+        id: 4,
+        ticket_id: 3,
+        sender: 'admin',
+        text: 'Cette fonctionnalité est maintenant disponible. Vous pouvez l’utiliser dans la dernière mise à jour.',
+        image_url: null,
+        created_at: '2025-04-04T15:20:00Z',
+      },
+    ],
+  },
+];

@@ -1,0 +1,165 @@
+/* ✨ App.css - Palette Premium PixelRise */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* ✅ CORRECTION: Utilisation des couleurs premium PixelRise */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #2563eb66); /* brand-blue avec transparence */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #f59e0b66); /* brand-yellow avec transparence */
+}
+
+/* ✨ Animation premium avec les couleurs PixelRise */
+.logo.pixelrise:hover {
+  filter: drop-shadow(0 0 2em #8b5cf666); /* purple-500 avec transparence */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✨ Animation premium avec glow effect */
+@keyframes logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #2563eb44);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #2563eb88);
+  }
+}
+
+@keyframes premium-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+  
+  /* ✨ Animation premium pour les logos PixelRise */
+  .logo.premium {
+    animation: logo-glow 3s ease-in-out infinite;
+  }
+  
+  .logo.float {
+    animation: premium-float 6s ease-in-out infinite;
+  }
+}
+
+.card {
+  padding: 2em;
+  /* ✅ AJOUT: Styles premium pour les cards */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px 0 rgba(37, 99, 235, 0.15);
+}
+
+/* ✅ CORRECTION: Couleur premium pour les textes */
+.read-the-docs {
+  color: #64748b; /* slate-500 de la palette premium */
+}
+
+/* ✨ NOUVELLES CLASSES PREMIUM AJOUTÉES */
+.text-premium {
+  color: #1e293b; /* slate-800 - texte principal premium */
+}
+
+.text-secondary-premium {
+  color: #64748b; /* slate-500 - texte secondaire premium */
+}
+
+.text-accent-premium {
+  color: #2563eb; /* brand-blue - texte accent premium */
+}
+
+.bg-premium {
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 30%, #f3e8ff 100%);
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #ef4444 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-premium:hover {
+  background: linear-gradient(135deg, #d97706 0%, #ea580c 50%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px -12px rgba(245, 158, 11, 0.4);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+/* ✨ Animations premium spécifiques */
+.animate-premium-pulse {
+  animation: premium-pulse 2s ease-in-out infinite;
+}
+
+@keyframes premium-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-premium-slide-in {
+  animation: premium-slide-in 0.8s ease-out;
+}
+
+@keyframes premium-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

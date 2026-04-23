@@ -1,0 +1,28 @@
+Mis à jours dernier
+
+parcours of devlopment : 
+stucture de mon projet 
+
+cd /chemin/vers/Pixel-Rise
+Pixel-Rise
+    |_laravel-backend 
+    |_react-frontend
+
+
+structure avec docker: 
+Pixel-Rise/
+├── docker-compose.yml
+├── .env
+├── laravel-backend/
+│   ├── Dockerfile
+│   └── .env
+└── react-frontend/
+    ├── Dockerfile
+    └── vite.config.ts
+    └── .env
+
+cd laravel-backend 
+cd react-frontend
+
+
+==========================================

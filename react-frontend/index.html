@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO géré dynamiquement par React Helmet dans chaque page -->
+
+    <meta name="google-site-verification" content="XYo3Pg9MRo0pA2rSjixjMkxp2MqNkLvD1UNmTbkPyO8" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+
+    <!-- Google tag (gtag.js) - Chargé seulement si consentement accepté -->
+    <script>
+      // ⚠️ IMPORTANT : Variable d'environnement injectée par Vite au build
+      // En développement, utiliser une valeur par défaut
+      const GA_TRACKING_ID = '__GA_TRACKING_ID__' || 'G-CYH5VGVLTS';
+      
+      // Vérifier le consentement avant de charger Google Analytics
+      const hasConsent = localStorage.getItem('cookie_consent') === 'true';
+      
+      if (hasConsent) {
+        console.log('✅ Consentement détecté - Chargement Google Analytics');
+        console.log('🎯 Tracking ID utilisé:', GA_TRACKING_ID);
+        
+        // Script Google Analytics exact comme fourni
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+        document.head.appendChild(script);
+        
+        // Configuration Google Analytics exacte
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', GA_TRACKING_ID);
+        
+        // Rendre gtag disponible globalement
+        window.gtag = gtag;
+        
+        console.log('📊 Google Analytics initialisé avec', GA_TRACKING_ID);
+        
+        // 🧪 SYSTÈME DE PREUVE - Envoyer événement de démarrage
+        gtag('event', 'app_startup', {
+          event_category: 'system',
+          event_label: 'app_loaded',
+          custom_parameter_1: new Date().toISOString(),
+          debug: true
+        });
+        
+        console.log('🔍 [PREUVE] Événement app_startup envoyé pour validation');
+      } else {
+        // Google Analytics non chargé (pas de consentement)
+      }
+    </script>
+    
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

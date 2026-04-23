@@ -16,7 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
 
-        // ===== TRUST PROXIES (reverse proxy Nginx → Docker) =====
+        // ===== TRUST PROXIES (reverse proxy / load balancer) =====
         $middleware->trustProxies(at: '*', headers: \Illuminate\Http\Request::HEADER_X_FORWARDED_FOR |
             \Illuminate\Http\Request::HEADER_X_FORWARDED_HOST |
             \Illuminate\Http\Request::HEADER_X_FORWARDED_PORT |
@@ -275,4 +275,3 @@ RateLimiter::for('5,2', function (Request $request) {
 });
 })
         ->create();
-

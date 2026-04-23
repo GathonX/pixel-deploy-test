@@ -104,12 +104,10 @@ react-frontend/src/
 ### Vérifier l'état
 ```bash
 # Voir les produits
-docker exec pixelrise-laravel-rel_20251225_140234 \
-  php artisan db:table marketplace_products
+php artisan db:table marketplace_products
 
 # Voir les commandes
-docker exec pixelrise-laravel-rel_20251225_140234 \
-  php artisan db:table marketplace_orders
+php artisan db:table marketplace_orders
 ```
 
 ### Ajouter des produits

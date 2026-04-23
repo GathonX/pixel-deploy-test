@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm run deploy",
+    "build": "tsc && vite build",
     "build-only": "tsc && vite build",
     "generate-sitemap": "node scripts/generate-sitemap.cjs",
-    "deploy": "docker exec pixelrise-react-rel_20251225_140234 sh -c 'cp -r /app/dist/* /usr/share/nginx/html/ && nginx -s reload' || echo '⚠️ Container non démarré'",
+    "deploy": "echo \"Deploy script removed.\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "verify-types": "tsc --noEmit",

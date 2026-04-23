@@ -8516,9 +8516,8 @@
                     "email": "taylor@laravel.com"
                 }
             ],
-            "description": "Docker files for running a basic Laravel application.",
+            "description": "Local development environment for running a basic Laravel application.",
             "keywords": [
-                "docker",
                 "laravel"
             ],
             "support": {

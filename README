@@ -9,17 +9,12 @@ Pixel-Rise
     |_react-frontend
 
 
-structure avec docker: 
+structure (sans conteneur) :
 Pixel-Rise/
-├── docker-compose.yml
-├── .env
 ├── laravel-backend/
-│   ├── Dockerfile
-│   └── .env
+│   └── .env* (non versionné)
 └── react-frontend/
-    ├── Dockerfile
-    └── vite.config.ts
-    └── .env
+    └── .env* (non versionné)
 
 cd laravel-backend 
 cd react-frontend

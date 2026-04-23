@@ -588,7 +588,7 @@ class SiteController extends Controller
         $expectedIp = '194.163.134.150';
         $domainName = $domain->domain;
 
-        // Vérification DNS synchrone via Google DNS-over-HTTPS (fonctionne depuis Docker)
+        // Vérification DNS synchrone via Google DNS-over-HTTPS
         $actualIp = null;
         try {
             $ctx = stream_context_create(['http' => ['timeout' => 5, 'ignore_errors' => true]]);
@@ -681,4 +681,3 @@ class SiteController extends Controller
         ]);
     }
 }
-

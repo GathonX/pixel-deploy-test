@@ -1475,7 +1475,7 @@ class ImageContextService
             'encrypter' => 'encryption security',
             'déchiffrer' => 'decryption security',
             'virtualiser' => 'virtualization cloud',
-            'containeriser' => 'containerization docker',
+            'containeriser' => 'containerization',
             'orchestrer' => 'orchestration kubernetes',
             'migrer' => 'migration cloud',
             'refactoriser' => 'refactoring code',
@@ -1641,7 +1641,7 @@ class ImageContextService
             'tech' => [
                 'algorithme', 'api', 'framework', 'architecture', 'scalabilité',
                 'sécurité', 'performance', 'interface', 'base_de_données', 'serveur',
-                'cloud', 'microservices', 'devops', 'ci_cd', 'docker', 'kubernetes',
+                'cloud', 'microservices', 'devops', 'ci_cd', 'kubernetes',
                 'machine_learning', 'intelligence_artificielle', 'neural_network', 'deep_learning',
                 'blockchain', 'cryptocurrency', 'nft', 'web3', 'metaverse',
                 'iot', 'edge_computing', 'quantum_computing', 'serverless',

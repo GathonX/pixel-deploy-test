@@ -89,29 +89,6 @@ laravel-backend/database/database.sqlite
 laravel-backend/database/backups/*.sql
 
 # ========================================
-# 🐳 DOCKER - CONFIGURATION SERVEUR
-# ========================================
-
-# ⚠️ FICHIERS ACTIFS SERVEUR : Ignorés pour éviter écrasement lors des pull
-docker-compose.yml
-docker-compose.override.yml
-laravel-backend/Dockerfile
-react-frontend/Dockerfile
-.dockerignore
-
-# ✅ AUTORISÉ : Fichiers TEMPLATES (à copier sur chaque serveur)
-!docker-compose.blue.yml
-!docker-compose.green.yml
-!docker-compose.shared.yml
-!docker-compose.production.yml
-!docker-compose.staging.yml
-!docker-compose.local.yml
-!laravel-backend/Dockerfile.production
-!laravel-backend/Dockerfile.staging
-!react-frontend/Dockerfile.production
-!react-frontend/Dockerfile.staging
-
-# ========================================
 # 📖 DOCUMENTATION - DÉVELOPPEMENT UNIQUEMENT
 # ========================================
 
@@ -123,13 +100,11 @@ docs/
 CORRECTION_*.md
 FLUX_*.md
 BUSINESS_PLAN_*.md
-DOCKER_*.md
 
 # Fichiers d'exemples et guides
 *.exemple.*
 *.example.*
 env.exemple.md
-Dockerfile.exemple.md
 
 # ========================================
 # 🧪 TESTS ET DÉVELOPPEMENT

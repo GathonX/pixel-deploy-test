@@ -78,7 +78,7 @@ Chaque template est **unique et fidèle à son site exemplaire**. Pas de copie d
 ### Phase 5 : Build, Seeder, Deploy
 - `npm run build`
 - Exécuter seeder
-- Deploy avec nettoyage assets Docker
+- Deploy avec nettoyage assets
 
 ---
 

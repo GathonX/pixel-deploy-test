@@ -166,7 +166,7 @@ if ($result['success']) {
 ### **Test 3 : Vérification des Objectifs**
 ```bash
 # Vérifier les objectifs générés
-docker exec pixelrise-laravel-backend php artisan tinker
+php artisan tinker
 >>> \App\Models\WeeklyContentObjective::latest()->get();
 ```
 
@@ -205,7 +205,7 @@ docker exec pixelrise-laravel-backend php artisan tinker
 
 1. **Queue Workers** : S'assurer que les workers de queue sont actifs
    ```bash
-   docker exec pixelrise-laravel-backend php artisan queue:work --queue=posts
+   php artisan queue:work --queue=posts
    ```
 
 2. **Projet Actif** : Chaque utilisateur doit avoir un projet actif (créé automatiquement si absent)
@@ -221,7 +221,7 @@ docker exec pixelrise-laravel-backend php artisan tinker
 1. **Vérifier les migrations** : Toutes les tables nécessaires existent déjà
 2. **Redémarrer les workers** :
    ```bash
-   docker exec pixelrise-laravel-backend php artisan queue:restart
+   php artisan queue:restart
    ```
 3. **Tester l'activation** : Activer une fonctionnalité et vérifier la génération
 
@@ -231,7 +231,7 @@ docker exec pixelrise-laravel-backend php artisan tinker
 
 En cas de problème, vérifier les logs Laravel :
 ```bash
-docker exec pixelrise-laravel-backend tail -f storage/logs/laravel.log
+tail -f storage/logs/laravel.log
 ```
 
 Rechercher les tags :

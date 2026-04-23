@@ -148,7 +148,7 @@ Route::get('/storage/{path}', function ($path) {
 // ===== HEALTHCHECK ROUTE =====
 
 /**
- * ✅ ROUTE : Healthcheck pour Docker
+ * ✅ ROUTE : Healthcheck
  */
 Route::get('/up', function () {
     return response()->json(['status' => 'ok'], 200);
